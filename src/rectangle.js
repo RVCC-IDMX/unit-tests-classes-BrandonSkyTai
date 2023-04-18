@@ -40,6 +40,7 @@
 // https://nodejs.org/api/modules.html#modules-commonjs-modules
 // const { Polygon } = require('./polygon');
 const { Polygon } = require('./polygon');
+
 /**
  * rectangle class
  * @class rectangle class extends Polygon
@@ -76,8 +77,8 @@ class Rectangle extends Polygon {
    * @returns {boolean} true if the height and width are both a number > 0
    */
   isValid() {
-    return typeof this.height === 'number' && this.height > 0 &&
-      typeof this.width === 'number' && this.width > 0;
+    return typeof this.height === 'number' && this.height > 0
+      && typeof this.width === 'number' && this.width > 0;
   }
 
   /**
@@ -89,9 +90,8 @@ class Rectangle extends Polygon {
   area() {
     if (this.isValid()) {
       return this.height * this.width;
-    } else {
-      return 0;
     }
+    return 0;
   }
 }
 
